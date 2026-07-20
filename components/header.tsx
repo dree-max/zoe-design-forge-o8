@@ -33,28 +33,28 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-10 md:flex">
           <Link
-            href="#technology"
-            className="text-sm transition-colors text-muted-foreground hover:text-foreground"
-          >
-            Design
-          </Link>
-          <Link
-            href="#gallery"
+            href="/gallery"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
           >
             Gallery
           </Link>
           <Link
-            href="#accessories"
+            href="/team"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
           >
-            Models
+            Team
           </Link>
           <Link
-            href="#about"
+            href="/story"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
           >
-            About
+            Story
+          </Link>
+          <Link
+            href="/faq"
+            className="text-sm transition-colors text-muted-foreground hover:text-foreground"
+          >
+            FAQ
           </Link>
         </nav>
 
@@ -84,32 +84,32 @@ export function Header() {
         <div className="border-t border-border bg-background px-6 py-8 md:hidden rounded-b-2xl">
           <nav className="flex flex-col gap-6">
             <Link
-              href="#technology"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Design
-            </Link>
-            <Link
-              href="#gallery"
+              href="/gallery"
               className="text-lg text-foreground"
               onClick={() => setIsMenuOpen(false)}
             >
               Gallery
             </Link>
             <Link
-              href="#accessories"
+              href="/team"
               className="text-lg text-foreground"
               onClick={() => setIsMenuOpen(false)}
             >
-              Models
+              Team
             </Link>
             <Link
-              href="#about"
+              href="/story"
               className="text-lg text-foreground"
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              Story
+            </Link>
+            <Link
+              href="/faq"
+              className="text-lg text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
             </Link>
             <Link
               href="#reserve"
