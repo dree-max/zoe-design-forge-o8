@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export function Header() {
@@ -26,8 +27,14 @@ export function Header() {
     >
       <div className="flex items-center justify-between transition-all duration-300 px-2 pl-5 py-2">
         {/* Logo */}
-        <Link href="#hero" className="text-lg font-medium tracking-tight transition-colors duration-300 text-foreground">
-          ZOE DESIGN FORGE
+        <Link href="/" className="relative h-10 w-auto">
+          <Image 
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-a2rO0XlXxlJ9bJ7wZZ5KVIXN9KEU4h.png"
+            alt="Zoe Design Forge"
+            height={40}
+            width={160}
+            className="h-full w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -61,7 +68,7 @@ export function Header() {
         {/* CTA */}
         <div className="hidden items-center gap-6 md:flex">
           <Link
-            href="#reserve"
+            href="/"
             className="px-4 py-2 text-sm font-medium transition-all rounded-full bg-foreground text-background hover:opacity-80"
           >
             Contact
@@ -112,7 +119,7 @@ export function Header() {
               FAQ
             </Link>
             <Link
-              href="#reserve"
+              href="/"
               className="mt-4 bg-foreground px-5 py-3 text-center text-sm font-medium text-background rounded-full"
               onClick={() => setIsMenuOpen(false)}
             >

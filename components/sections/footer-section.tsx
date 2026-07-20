@@ -4,22 +4,19 @@ import Link from "next/link";
 
 const footerLinks = {
   explore: [
-    { label: "Products", href: "#products" },
-    { label: "Technology", href: "#technology" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Accessories", href: "#accessories" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Team", href: "/team" },
+    { label: "Story", href: "/story" },
+    { label: "FAQ", href: "/faq" },
   ],
   about: [
-    { label: "Our Story", href: "#" },
-    { label: "Team", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Our Story", href: "/story" },
+    { label: "Team", href: "/team" },
+    { label: "Home", href: "/" },
   ],
   service: [
-    { label: "FAQ", href: "#" },
-    { label: "Shipping", href: "#" },
-    { label: "Returns", href: "#" },
-    { label: "Warranty", href: "#" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Gallery", href: "/gallery" },
   ],
 };
 
@@ -31,7 +28,7 @@ export function FooterSection() {
         <div className="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 lg:col-span-2">
-            <Link href="#hero" className="text-lg font-medium text-foreground">
+            <Link href="/" className="text-lg font-medium text-foreground">
               ZOE DESIGN FORGE
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
