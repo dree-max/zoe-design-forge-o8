@@ -55,12 +55,12 @@ export default function TeamPage() {
                 className="group cursor-pointer animate-reveal-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="mb-6 overflow-hidden rounded-lg bg-muted h-80 relative">
+                <div className="mb-6 overflow-hidden rounded-lg bg-muted h-96 relative flex items-center justify-center">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300 p-4"
                   />
                 </div>
                 <h3 className="text-2xl font-light mb-1 group-hover:text-muted-foreground transition-colors">
