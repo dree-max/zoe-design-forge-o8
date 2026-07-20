@@ -32,7 +32,7 @@ export function FooterSection() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 lg:col-span-2">
             <Link href="#hero" className="text-lg font-medium text-foreground">
-              MONO
+              ZOE DESIGN FORGE
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Sustainable design homes combining contemporary aesthetics with energy efficiency and eco-friendly materials.
