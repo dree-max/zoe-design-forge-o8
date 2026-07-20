@@ -26,15 +26,20 @@ export function Header() {
       }}
     >
       <div className="flex items-center justify-between transition-all duration-300 px-2 pl-5 py-2">
-        {/* Logo */}
-        <Link href="/" className="relative h-10 w-auto">
-          <Image 
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-a2rO0XlXxlJ9bJ7wZZ5KVIXN9KEU4h.png"
-            alt="Zoe Design Forge"
-            height={40}
-            width={160}
-            className="h-full w-auto object-contain"
-          />
+        {/* Logo and Branding */}
+        <Link href="/" className="flex items-center gap-3">
+          <div className="relative h-10 w-12">
+            <Image 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-a2rO0XlXxlJ9bJ7wZZ5KVIXN9KEU4h.png"
+              alt="Zoe Design Forge"
+              height={40}
+              width={50}
+              className="h-full w-auto object-contain"
+            />
+          </div>
+          <span className="text-sm font-bold tracking-tight text-foreground hidden sm:inline">
+            ZOE DESIGN FORGE
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
