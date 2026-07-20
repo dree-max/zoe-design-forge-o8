@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-const word = "ZOE FORGE";
+const word = "ZOE";
 
 const sideImages = [
   {
