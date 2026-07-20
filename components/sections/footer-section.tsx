@@ -96,7 +96,7 @@ export function FooterSection() {
       <div className="border-t border-border px-6 py-6 md:px-12 lg:px-20">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            2026 ZOE DESIGN FORGE. All rights reserved.
+            2026 MONO. All rights reserved.
           </p>
 
           
