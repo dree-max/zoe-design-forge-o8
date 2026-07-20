@@ -4,25 +4,25 @@ import Image from "next/image";
 
 const teamMembers = [
   {
-    name: "Sarah Obalufa",
-    title: "Lead Architect",
-    discipline: "Architecture",
-    bio: "With over 15 years of experience in residential and commercial design, Sarah leads the architectural vision at Zoe Design Forge with a focus on sustainable and human-centered spaces.",
-    image: "/images/team-member-1.jpg"
+    name: "Katurebe Alvin Edson",
+    title: "Chief Executive Officer",
+    discipline: "Leadership & Vision",
+    bio: "Visionary leader and founder. Alvin shapes the creative direction and business strategy of Zoe Design Forge — turning bold ideas into built reality.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Alvin%20-6tMeVexyBOLB6EwiSvdTDF5OAzBJZz.jpeg"
   },
   {
-    name: "James Kabega",
-    title: "Structural Engineer",
-    discipline: "Structural Engineering",
-    bio: "James brings innovative structural solutions to every project, ensuring that bold designs are grounded in engineering excellence and safety.",
-    image: "/images/team-member-2.jpg"
+    name: "Agaba Amon",
+    title: "Chief Operating Officer",
+    discipline: "Operations & Project Management",
+    bio: "The engine behind every project. Amon ensures Zoe's commissions run on time, on budget, and to the standard every client expects.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agaba%20Amon-n3MQQmPlVtHUfdP3cRKn4bghkezdnu.jpeg"
   },
   {
-    name: "Amelia Nkomo",
-    title: "Interior Designer",
-    discipline: "Interior Design",
-    bio: "Amelia transforms spaces through thoughtful material selection and spatial planning, creating interiors that are both beautiful and functional.",
-    image: "/images/team-member-3.jpg"
+    name: "Aitaa Solomon Justin",
+    title: "Architect & Interior Designer",
+    discipline: "Architecture & Design",
+    bio: "Where structure meets soul. Solomon brings technical precision and design intuition to every space — from first sketch to final blueprint.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Aita%20Solomon-uUUtiEeNN04Fhy9JGCe2268WR9gusr.png"
   }
 ];
 
@@ -56,14 +56,12 @@ export default function TeamPage() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="mb-6 overflow-hidden rounded-lg bg-muted h-80 relative">
-                  <div className="w-full h-full bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl font-light text-muted-foreground mb-2">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </div>
-                      <p className="text-sm text-muted-foreground">{member.discipline}</p>
-                    </div>
-                  </div>
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <h3 className="text-2xl font-light mb-1 group-hover:text-muted-foreground transition-colors">
                   {member.name}
