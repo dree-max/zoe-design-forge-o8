@@ -32,7 +32,7 @@ export function FooterSection() {
               ZOE DESIGN FORGE
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Sustainable design homes combining contemporary aesthetics with energy efficiency and eco-friendly materials.
+              Transforming visions into structural reality. We build the future of landscape.
             </p>
           </div>
 
