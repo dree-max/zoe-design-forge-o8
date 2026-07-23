@@ -21,7 +21,7 @@ const teamMembers = [
     name: "Aitaa Solomon Justin",
     title: "Architect & Interior Designer",
     discipline: "Architecture & Design",
-    bio: "Where structure meets soul. Solomon brings technical precision and design intuition to every space — from first sketch to final blueprint.",
+    bio: "Where structure meets soul. Solomon brings technical precision and design intuition to every space from first sketch to final blueprint.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Aita%20Solomon-uUUtiEeNN04Fhy9JGCe2268WR9gusr.png"
   },
   {
