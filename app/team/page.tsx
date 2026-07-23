@@ -23,6 +23,13 @@ const teamMembers = [
     discipline: "Architecture & Design",
     bio: "Where structure meets soul. Solomon brings technical precision and design intuition to every space — from first sketch to final blueprint.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Aita%20Solomon-uUUtiEeNN04Fhy9JGCe2268WR9gusr.png"
+  },
+  {
+    name: "Sunday Portia Marjorie",
+    title: "Lead Interior Designer",
+    discipline: "Interior Design",
+    bio: "She turns a feeling into a room. Sunday crafts interiors that are as purposeful as they are beautiful, rooted in the client's story.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260721-WA0012.jpg-rbwH3WYydTOhNcevUzrR6V9xx5FjYA.jpeg"
   }
 ];
 
@@ -48,7 +55,7 @@ export default function TeamPage() {
       {/* Team Grid */}
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-secondary/30">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-4xl">
             {teamMembers.map((member, index) => (
               <div 
                 key={index} 
