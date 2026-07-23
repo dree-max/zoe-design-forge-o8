@@ -30,6 +30,13 @@ const teamMembers = [
     discipline: "Interior Design",
     bio: "She turns a feeling into a room. Sunday crafts interiors that are as purposeful as they are beautiful, rooted in the client's story.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260721-WA0012.jpg-rbwH3WYydTOhNcevUzrR6V9xx5FjYA.jpeg"
+  },
+  {
+    name: "Ashaba Aheebwa Andrew",
+    title: "Structural Engineer",
+    discipline: "Structural Engineering",
+    bio: "The foundation of every vision. Andrew ensures every structure Zoe designs is built to last, safe, precise, and engineered to perform.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0741.PNG-X02Mg2KcSnq1n6nNzDx7GFNsHQsU1W.png"
   }
 ];
 
@@ -55,11 +62,11 @@ export default function TeamPage() {
       {/* Team Grid */}
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-secondary/30">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto justify-items-center">
             {teamMembers.map((member, index) => (
               <div 
                 key={index} 
-                className="group cursor-pointer animate-reveal-up"
+                className="group cursor-pointer animate-reveal-up w-full max-w-sm"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="mb-6 overflow-hidden rounded-lg bg-muted h-96 relative flex items-center justify-center">
