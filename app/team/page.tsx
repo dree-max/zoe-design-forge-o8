@@ -7,7 +7,7 @@ const teamMembers = [
     name: "Katurebe Alvin Edson",
     title: "Chief Executive Officer",
     discipline: "Leadership & Vision",
-    bio: "Visionary leader and founder. Alvin shapes the creative direction and business strategy of Zoe Design Forge — turning bold ideas into built reality.",
+    bio: "Visionary leader and founder. Alvin shapes the creative direction and business strategy of Zoe Design Forge, turning bold ideas into built reality.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Alvin%20-6tMeVexyBOLB6EwiSvdTDF5OAzBJZz.jpeg"
   },
   {
