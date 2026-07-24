@@ -195,9 +195,9 @@ export function HeroSection() {
         style={{ opacity: textOpacity }}
       >
         <p className="mx-auto max-w-2xl text-center text-2xl leading-relaxed text-white md:text-3xl lg:text-[2.5rem] lg:leading-snug">
-          <span className="font-bold">DESIGN. BUILD.</span>
+          DESIGN. BUILD.
           <br />
-          <span className="font-bold" style={{ color: '#ff4d00' }}>INSPIRE.</span>
+          INSPIRE.
         </p>
       </div>
 

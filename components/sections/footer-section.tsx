@@ -12,11 +12,11 @@ const footerLinks = {
   about: [
     { label: "Our Story", href: "/story" },
     { label: "Team", href: "/team" },
-    { label: "Contact", href: "/contact" },
+    { label: "Home", href: "/" },
   ],
   service: [
     { label: "FAQ", href: "/faq" },
-    { label: "Contact", href: "/contact" },
+    { label: "Gallery", href: "/gallery" },
   ],
 };
 
