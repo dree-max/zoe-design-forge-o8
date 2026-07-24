@@ -47,24 +47,28 @@ export function Header() {
           <Link
             href="/gallery"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
+            style={{ color: '#110f0f', fontWeight: '700' }}
           >
             Gallery
           </Link>
           <Link
             href="/team"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
+            style={{ color: '#131010', fontWeight: '700' }}
           >
             Team
           </Link>
           <Link
             href="/story"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
+            style={{ color: '#151313', fontWeight: '700' }}
           >
             Story
           </Link>
           <Link
             href="/faq"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
+            style={{ color: '#171515', fontWeight: '700' }}
           >
             FAQ
           </Link>
