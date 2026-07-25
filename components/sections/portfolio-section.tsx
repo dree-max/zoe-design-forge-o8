@@ -7,21 +7,21 @@ export function PortfolioSection() {
   const projects = [
     {
       id: 1,
-      image: "/images/mono-1.png",
-      title: "Residential Entebbe",
-      description: "A contemporary residential development combining modern aesthetics with sustainable building practices. The project showcases innovative architectural design with focus on natural light and ventilation."
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Residential%20Entebbe%20Akright-2nLn7GElRMjnPshVbRQZ1fueOYkyb3.png",
+      title: "Residential Entebbe Akright",
+      description: "A luxury residential estate featuring clean lines, modern materiality, and strategic fenestration. This project exemplifies contemporary residential design with premium finishes and sophisticated spatial planning."
     },
     {
       id: 2,
-      image: "/images/mono-2.png",
-      title: "Commercial Mixed-Use",
-      description: "An integrated commercial and residential complex featuring modern facade design and efficient space utilization. The project demonstrates our expertise in multi-functional urban development."
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/KMT%20Plaza%20Nansana-k0FIkOIO50kE58ghldeNcSyrsDeoyp.jpeg",
+      title: "KMT Plaza Nansana",
+      description: "A vibrant mixed-use commercial plaza featuring retail, offices, and public gathering spaces. This development showcases our expertise in creating dynamic urban environments that blend commerce with community."
     },
     {
       id: 3,
-      image: "/images/mono-3.png",
-      title: "Luxury Residential",
-      description: "A premium residential project showcasing architectural excellence with sophisticated design elements. The development features spacious layouts, premium finishes, and contemporary aesthetics."
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Wakiso%20Gardens-DwKAqBs8uvBfDGEGEvT2BnXUZu8tqj.jpeg",
+      title: "Wakiso Gardens",
+      description: "A contemporary landscape design featuring water features, native plantings, and architectural hardscaping. This project demonstrates our holistic approach to outdoor spaces that complement architectural design."
     }
   ];
 
