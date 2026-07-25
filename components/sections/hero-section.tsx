@@ -197,7 +197,7 @@ export function HeroSection() {
         <p className="mx-auto max-w-2xl text-center text-2xl leading-relaxed text-white md:text-3xl lg:text-[2.5rem] lg:leading-snug">
           DESIGN. BUILD.
           <br />
-          INSPIRE.
+          <span className="font-bold" style={{ color: '#ff4d00' }}>INSPIRE.</span>
         </p>
       </div>
 

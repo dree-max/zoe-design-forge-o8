@@ -20,146 +20,30 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* Founding */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-secondary/30">
+      {/* Our Journey */}
+      <section className="py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto">
-          <div className="animate-reveal-up">
-            <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-8">
-              The Beginning
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Zoe Design Forge was founded with a simple belief: exceptional design emerges when diverse disciplines collaborate from the very beginning. Rather than working in silos, our team of architects, structural engineers, MEP specialists, civil engineers, interior designers, and landscape architects work together to create holistic solutions.
-            </p>
+          <div className="animate-reveal-up space-y-8">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Every project starts with a conversation. We listen, we question, we explore possibilities that others might overlook. This collaborative approach has become the foundation of everything we do.
+              Zoe Design Forge was founded in 2024 with a simple but ambitious mission: to redefine Architecture and Engineering through innovation. What began as a small team with a big vision has grown into a company building practical, technology-driven solutions for the built environment across East Africa.
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              At the heart of our work is Forge, our mobile application platform designed to bring efficiency and transparency to the industry. Forge integrates a CMMS (Computerized Maintenance Management System) for smarter facility management, real-time construction tracking to keep projects accountable and on schedule, and a real estate marketplace connecting people to housing opportunities with ease.
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Central to our vision is the Forge Housing for All initiative — our commitment to using technology to make housing more accessible, transparent, and efficient for communities across the region.
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Since our founding, our team has delivered multiple projects across East Africa, learning, iterating, and refining our solutions with every engagement. We're proud of how far we've come, but we see this as just the beginning. As we look ahead, we're expanding our reach beyond East Africa, carrying the same drive for innovation to new markets and new challenges.
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              This journey has never been the work of one person — it's the result of a dedicated team that believes design, engineering, and technology can come together to build a better future.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Timeline/Milestones */}
-      <section className="py-20 px-6 md:px-12 lg:px-24">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-16 animate-reveal-up">
-            Key Milestones
-          </h2>
-          
-          <div className="space-y-12">
-            {[
-              {
-                year: "2015",
-                title: "Foundation",
-                description: "Zoe Design Forge is established with a core team of three principals, each bringing expertise from Africa's leading architecture firms."
-              },
-              {
-                year: "2017",
-                title: "Growth",
-                description: "The team expands to include specialists in MEP, civil engineering, and landscape architecture—establishing our truly multi-disciplinary approach."
-              },
-              {
-                year: "2019",
-                title: "Recognition",
-                description: "Our innovative residential and commercial projects begin earning regional awards and international recognition for design excellence."
-              },
-              {
-                year: "2021",
-                title: "Expansion",
-                description: "We open a new studio and expand our capabilities in sustainable design and large-scale mixed-use developments."
-              },
-              {
-                year: "2024",
-                title: "Evolution",
-                description: "Today, we continue to push boundaries, exploring new materials, technologies, and design methodologies to create spaces that inspire."
-              }
-            ].map((milestone, index) => (
-              <div 
-                key={index}
-                className="flex gap-8 animate-reveal-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex-shrink-0">
-                  <div className="text-3xl font-light text-accent w-24">
-                    {milestone.year}
-                  </div>
-                </div>
-                <div className="flex-grow border-l border-border pl-8 pb-8 last:pb-0">
-                  <h3 className="text-xl font-light mb-2">
-                    {milestone.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {milestone.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Multi-Discipline Model */}
-      <section className="py-20 px-6 md:px-12 lg:px-24 bg-secondary/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-16 animate-reveal-up">
-            Our Multi-Disciplinary Approach
-          </h2>
-          
-          <p className="text-lg text-muted-foreground leading-relaxed mb-12 animate-reveal-up">
-            Most design firms organize around disciplines, with each specialist working in isolation before handing off to the next phase. We believe this approach misses crucial opportunities for innovation.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {[
-              {
-                discipline: "Architecture",
-                description: "Visionary design that balances aesthetics, functionality, and human experience."
-              },
-              {
-                discipline: "Structural Engineering",
-                description: "Innovative structural solutions that enable bold designs while ensuring safety and durability."
-              },
-              {
-                discipline: "MEP Engineering",
-                description: "Integrated mechanical, electrical, and plumbing systems designed for efficiency and performance."
-              },
-              {
-                discipline: "Civil Engineering",
-                description: "Site planning and infrastructure that harmonizes development with the natural landscape."
-              },
-              {
-                discipline: "Interior Design",
-                description: "Thoughtfully designed interiors that reflect the building's architectural vision."
-              },
-              {
-                discipline: "Landscape Architecture",
-                description: "Outdoor spaces that extend the design narrative and enhance quality of life."
-              }
-            ].map((item, index) => (
-              <div 
-                key={index}
-                className="animate-reveal-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <h3 className="text-lg font-light mb-2">
-                  {item.discipline}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="py-20 px-6 md:px-12 lg:px-24">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-8 animate-reveal-up">
-            Our Mission
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed animate-reveal-up">
-            To create exceptional spaces that enhance human experience, elevate communities, and demonstrate that great design is possible when diverse expertise collaborates from inception. We pursue projects that challenge us to innovate, that matter to our clients and their users, and that contribute positively to the built environment.
-          </p>
         </div>
       </section>
 

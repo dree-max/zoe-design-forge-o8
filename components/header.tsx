@@ -72,6 +72,20 @@ export function Header() {
           >
             FAQ
           </Link>
+          <Link
+            href="/services"
+            className="text-sm transition-colors text-muted-foreground hover:text-foreground"
+            style={{ color: '#1a1717', fontWeight: '700' }}
+          >
+            Services
+          </Link>
+          <Link
+            href="/blog"
+            className="text-sm transition-colors text-muted-foreground hover:text-foreground"
+            style={{ color: '#1c1919', fontWeight: '700' }}
+          >
+            Blog
+          </Link>
         </nav>
 
         {/* CTA */}
@@ -128,11 +142,25 @@ export function Header() {
               FAQ
             </Link>
             <Link
-              href="/"
-              className="mt-4 bg-foreground px-5 py-3 text-center text-sm font-medium text-background rounded-full"
+              href="/contact"
+              className="text-lg text-foreground"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
+            </Link>
+            <Link
+              href="/services"
+              className="text-lg text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              href="/blog"
+              className="text-lg text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </Link>
           </nav>
         </div>

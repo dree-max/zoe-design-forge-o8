@@ -12,7 +12,12 @@ const footerLinks = {
   about: [
     { label: "Our Story", href: "/story" },
     { label: "Team", href: "/team" },
-    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Contact", href: "/contact" },
+  ],
+  service: [
+    { label: "Blog", href: "/blog" },
+    { label: "FAQ", href: "/faq" },
   ],
   service: [
     { label: "FAQ", href: "/faq" },
@@ -101,22 +106,20 @@ export function FooterSection() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <Link
-              href="#"
+              href="https://www.instagram.com/zoeforge.arch"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xs text-muted-foreground transition-colors hover:text-foreground"
             >
               Instagram
             </Link>
             <Link
-              href="#"
+              href="https://x.com/zforge29184?s=11"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xs text-muted-foreground transition-colors hover:text-foreground"
             >
               Twitter
-            </Link>
-            <Link
-              href="#"
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-            >
-              YouTube
             </Link>
           </div>
         </div>
