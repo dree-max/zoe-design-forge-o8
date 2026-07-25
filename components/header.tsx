@@ -59,30 +59,16 @@ export function Header() {
             Team
           </Link>
           <Link
-            href="/story"
-            className="text-sm transition-colors text-muted-foreground hover:text-foreground"
-            style={{ color: '#151313', fontWeight: '700' }}
-          >
-            Story
-          </Link>
-          <Link
-            href="/faq"
-            className="text-sm transition-colors text-muted-foreground hover:text-foreground"
-            style={{ color: '#171515', fontWeight: '700' }}
-          >
-            FAQ
-          </Link>
-          <Link
             href="/services"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
-            style={{ color: '#1a1717', fontWeight: '700' }}
+            style={{ color: '#151313', fontWeight: '700' }}
           >
             Services
           </Link>
           <Link
             href="/blog"
             className="text-sm transition-colors text-muted-foreground hover:text-foreground"
-            style={{ color: '#1c1919', fontWeight: '700' }}
+            style={{ color: '#171515', fontWeight: '700' }}
           >
             Blog
           </Link>
@@ -128,27 +114,6 @@ export function Header() {
               Team
             </Link>
             <Link
-              href="/story"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Story
-            </Link>
-            <Link
-              href="/faq"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              FAQ
-            </Link>
-            <Link
-              href="/contact"
-              className="text-lg text-foreground"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <Link
               href="/services"
               className="text-lg text-foreground"
               onClick={() => setIsMenuOpen(false)}
@@ -161,6 +126,13 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
+            </Link>
+            <Link
+              href="/contact"
+              className="text-lg text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
             </Link>
           </nav>
         </div>

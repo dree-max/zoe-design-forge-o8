@@ -82,6 +82,23 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="py-20 px-6 md:px-12 lg:px-24 bg-secondary/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-lg overflow-hidden h-96 animate-reveal-up">
+            <iframe
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8198876594626!2d32.5670923!3d0.3169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbd68a8d8d8d7%3A0x5c5c5c5c5c5c5c5c!2sNansana%20Heights%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2s!4v1234567890"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto">
