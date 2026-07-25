@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'Zoe Design Forge',
-  description: 'Transforming visions into structural reality. We build the future of landscape.',
+  description: 'Redefining Architecture and Engineering',
   generator: 'v0.app',
   icons: {
     icon: [
