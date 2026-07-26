@@ -27,13 +27,6 @@ const accessories = [
 export function CollectionSection() {
   return (
     <section id="accessories" className="bg-background">
-      {/* Section Title */}
-      <div className="px-6 py-12 md:px-12 lg:px-20 md:py-8">
-        <h2 className="text-3xl font-medium tracking-tight text-foreground md:text-4xl">
-          Our Portfolio
-        </h2>
-      </div>
-
       {/* Accessories Grid/Carousel */}
       <div className="pb-12">
         {/* Mobile: Horizontal Carousel */}
