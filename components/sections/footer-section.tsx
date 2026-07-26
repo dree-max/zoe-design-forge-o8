@@ -36,20 +36,20 @@ export function FooterSection() {
             <Link href="/" className="text-base font-bold text-foreground">
               ZOE DESIGN FORGE
             </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-xs text-sm font-bold leading-relaxed text-muted-foreground">
               Transforming visions into structural reality. We build the future of landscape.
             </p>
           </div>
 
           {/* Explore */}
           <div>
-            <h4 className="mb-4 text-sm font-medium text-foreground">Explore</h4>
+            <h4 className="mb-4 text-sm font-bold text-foreground">Explore</h4>
             <ul className="space-y-3">
               {footerLinks.explore.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm font-bold text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -60,13 +60,13 @@ export function FooterSection() {
 
           {/* About */}
           <div>
-            <h4 className="mb-4 text-sm font-medium text-foreground">About</h4>
+            <h4 className="mb-4 text-sm font-bold text-foreground">About</h4>
             <ul className="space-y-3">
               {footerLinks.about.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm font-bold text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -77,13 +77,13 @@ export function FooterSection() {
 
           {/* Service */}
           <div>
-            <h4 className="mb-4 text-sm font-medium text-foreground">Service</h4>
+            <h4 className="mb-4 text-sm font-bold text-foreground">Service</h4>
             <ul className="space-y-3">
               {footerLinks.service.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm font-bold text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>

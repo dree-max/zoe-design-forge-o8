@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { PhilosophySection } from "@/components/sections/philosophy-section";
 import { FeaturedProductsSection } from "@/components/sections/featured-products-section";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
-import { GallerySection } from "@/components/sections/gallery-section";
 import { CollectionSection } from "@/components/sections/collection-section";
 import { EditorialSection } from "@/components/sections/editorial-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -18,7 +17,6 @@ export default function Home() {
       <PhilosophySection />
       <FeaturedProductsSection />
       <PortfolioSection />
-      <GallerySection />
       <CollectionSection />
       <EditorialSection />
       <TestimonialsSection />

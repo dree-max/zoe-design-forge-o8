@@ -7,7 +7,7 @@ export function BlogPreviewSection() {
     id: 1,
     title: "The Future of Sustainable Architecture",
     excerpt: "Exploring how innovative design and technology can reduce environmental impact while creating beautiful, functional spaces.",
-    date: "July 15, 2024",
+    date: "July 15, 2026",
     category: "Architecture",
   };
 

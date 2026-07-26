@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { FooterSection } from "@/components/sections/footer-section";
+import Image from "next/image";
 
 export default function StoryPage() {
   return (
@@ -16,6 +17,79 @@ export default function StoryPage() {
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               From a shared vision to a thriving design studio, discover how Zoe Design Forge came to be and the values that guide every project.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Forge App Interactive Banner */}
+      <section className="relative py-16 px-6 md:px-12 lg:px-24 bg-gradient-to-r from-orange-50 to-white overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* Left: Content */}
+            <div className="space-y-6 animate-reveal-up order-2 md:order-1">
+              <div>
+                <p className="text-orange-600 font-semibold tracking-widest text-sm mb-4">
+                  OUR INNOVATION
+                </p>
+                <h3 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
+                  Meet Forge
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Our revolutionary mobile platform designed to transform the built environment. Forge brings efficiency, transparency, and innovation to every aspect of architecture and construction.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-6 h-6 bg-orange-600 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Real Estate Marketplace</h4>
+                    <p className="text-sm text-muted-foreground">Connect people with housing opportunities seamlessly</p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-6 h-6 bg-orange-600 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Construction Tracking</h4>
+                    <p className="text-sm text-muted-foreground">Real-time project monitoring and accountability</p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-6 h-6 bg-orange-600 rounded-full flex items-center justify-center mt-1">
+                    <span className="text-white text-sm">✓</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground">Property Management</h4>
+                    <p className="text-sm text-muted-foreground">CMMS for smarter facility and maintenance management</p>
+                  </div>
+                </div>
+              </div>
+              
+              <a 
+                href="https://forgeapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-colors"
+              >
+                Download Forge App →
+              </a>
+            </div>
+            
+            {/* Right: Banner Image */}
+            <div className="relative h-96 md:h-full animate-reveal-up order-1 md:order-2">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Jul%2025%2C%202026%2C%2001_58_46%20PM-CYpAgEXSgyW0zhghe5l3uJ6LqDQlPd.png"
+                alt="Forge App - Mobile Platform"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
