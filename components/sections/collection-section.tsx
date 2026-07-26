@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FadeImage } from "@/components/fade-image";
 
 const accessories = [
@@ -94,12 +95,12 @@ export function CollectionSection() {
 
             {/* Button */}
             <div>
-              <a
+              <Link
                 href="/blog"
                 className="inline-block px-6 lg:px-8 py-3 lg:py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-colors"
               >
                 VISIT OUR BLOG →
-              </a>
+              </Link>
             </div>
           </div>
         </div>
