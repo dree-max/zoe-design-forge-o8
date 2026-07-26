@@ -8,21 +8,18 @@ const accessories = [
     id: 1,
     name: "Compact Model",
     description: "120m² living space with optimal energy efficiency",
-    
     image: "/images/hero-side-1.png",
   },
   {
     id: 2,
     name: "Standard Model",
     description: "180m² perfect balance of space and sustainability",
-    
     image: "/images/hero-side-2.png",
   },
   {
     id: 3,
     name: "Premium Model",
     description: "250m² expansive design with maximum comfort",
-    
     image: "/images/hero-side-4.png",
   },
 ];
@@ -55,19 +52,12 @@ export function CollectionSection() {
 
               {/* Content */}
               <div className="py-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-medium leading-snug text-foreground">
-                      {accessory.name}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      {accessory.description}
-                    </p>
-                  </div>
-                  <span className="text-lg font-medium text-foreground">
-                    {accessory.price}
-                  </span>
-                </div>
+                <h3 className="text-lg font-medium leading-snug text-foreground">
+                  {accessory.name}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {accessory.description}
+                </p>
               </div>
             </div>
           ))}
