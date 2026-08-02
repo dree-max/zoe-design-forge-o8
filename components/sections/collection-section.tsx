@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { FadeImage } from "@/components/fade-image";
+import type { Post } from "@/sanity/types";
 
 const accessories = [
   {
@@ -24,7 +25,22 @@ const accessories = [
   },
 ];
 
-export function CollectionSection() {
+interface CollectionSectionProps {
+  posts?: Post[];
+}
+
+function formatDate(date?: string) {
+  if (!date) return null;
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+export function CollectionSection({ posts = [] }: CollectionSectionProps) {
+  const latestPosts = posts.slice(0, 2);
+
   return (
     <section id="accessories" className="bg-background">
       {/* Accessories Grid/Carousel */}
@@ -56,8 +72,8 @@ export function CollectionSection() {
           ))}
         </div>
 
-        {/* Desktop: Blog Preview */}
-        <div className="hidden md:flex md:px-12 lg:px-20 justify-center">
+        {/* Blog Preview */}
+        <div className="flex md:px-12 lg:px-20 justify-center">
           <div className="w-full max-w-4xl bg-black/80 rounded-3xl p-8 lg:p-12 flex flex-col justify-between min-h-[280px]">
             {/* Label */}
             <div>
@@ -75,6 +91,39 @@ export function CollectionSection() {
                 Dive deep into our design philosophy, project showcases, and the latest trends in architectural landscape.
               </p>
             </div>
+
+            {/* Latest Posts */}
+            {latestPosts.length > 0 && (
+              <div className="grid gap-4 md:grid-cols-2 mb-8">
+                {latestPosts.map((post) => (
+                  <Link
+                    key={post._id}
+                    href={`/blog/${post.slug}`}
+                    className="group bg-white/5 border border-white/10 rounded-xl p-5 hover:border-orange-600 transition-colors"
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs text-gray-400">
+                        {formatDate(post.publishedAt)}
+                      </span>
+                      {post.categories?.[0] && (
+                        <span className="px-2 py-0.5 bg-orange-600/20 text-orange-400 rounded-full text-xs font-medium">
+                          {post.categories[0].title}
+                        </span>
+                      )}
+                    </div>
+                    <h4 className="text-lg font-semibold text-white leading-snug mb-2 group-hover:text-orange-500 transition-colors">
+                      {post.title}
+                    </h4>
+                    <p className="text-sm text-gray-400 leading-relaxed line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-4 text-sm font-medium text-orange-500 group-hover:translate-x-1 transition-transform inline-block">
+                      Read Article →
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
 
             {/* Button */}
             <div>

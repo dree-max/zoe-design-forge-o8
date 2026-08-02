@@ -8,8 +8,18 @@ import { EditorialSection } from "@/components/sections/editorial-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { TechnologySection } from "@/components/sections/technology-section";
 import { FooterSection } from "@/components/sections/footer-section";
+import { client } from "@/sanity/lib/client";
+import { isSanityConfigured } from "@/sanity/lib/env";
+import { postsIndexQuery } from "@/sanity/lib/queries";
+import type { Post } from "@/sanity/types";
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  const posts = isSanityConfigured
+    ? await client.fetch<Post[]>(postsIndexQuery)
+    : [];
+
   return (
     <main className="min-h-screen bg-background">
       <Header />
@@ -17,7 +27,7 @@ export default function Home() {
       <PhilosophySection />
       <FeaturedProductsSection />
       <PortfolioSection />
-      <CollectionSection />
+      <CollectionSection posts={posts} />
       <EditorialSection />
       <TestimonialsSection />
       <TechnologySection />
