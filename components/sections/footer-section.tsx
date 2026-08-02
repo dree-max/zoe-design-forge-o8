@@ -18,9 +18,6 @@ const footerLinks = {
   service: [
     { label: "Blog", href: "/blog" },
     { label: "FAQ", href: "/faq" },
-  ],
-  service: [
-    { label: "FAQ", href: "/faq" },
     { label: "Gallery", href: "/gallery" },
   ],
 };
