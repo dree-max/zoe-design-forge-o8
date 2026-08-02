@@ -5,7 +5,7 @@ import type {PortableImage, Post} from '@/sanity/types'
 import { urlFor } from '@/sanity/lib/image'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import {PortableText, type PortableTextTypeComponentProps} from 'next-sanity'
+import {PortableText, type PortableTextComponents, type PortableTextTypeComponentProps} from 'next-sanity'
 import Link from 'next/link'
 
 interface PageProps {
@@ -28,7 +28,46 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   if (!post) notFound()
 
-  const portableTextComponents = {
+  const portableTextComponents: PortableTextComponents = {
+    block: {
+      h1: ({children}) => (
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight mt-10 mb-4">{children}</h1>
+      ),
+      h2: ({children}) => (
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mt-10 mb-4">{children}</h2>
+      ),
+      h3: ({children}) => (
+        <h3 className="text-xl md:text-2xl font-bold tracking-tight mt-8 mb-3">{children}</h3>
+      ),
+      h4: ({children}) => (
+        <h4 className="text-lg md:text-xl font-bold tracking-tight mt-6 mb-2">{children}</h4>
+      ),
+      normal: ({children}) => (
+        <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">{children}</p>
+      ),
+    },
+    marks: {
+      strong: ({children}) => <strong className="font-semibold text-foreground">{children}</strong>,
+      em: ({children}) => <em className="italic">{children}</em>,
+      link: ({value, children}) => (
+        <a
+          href={value?.href}
+          target={value?.href?.startsWith('http') ? '_blank' : undefined}
+          rel={value?.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+          className="text-accent underline underline-offset-4 hover:opacity-70"
+        >
+          {children}
+        </a>
+      ),
+    },
+    list: {
+      bullet: ({children}) => <ul className="list-disc pl-6 space-y-2 mb-6 text-base md:text-lg text-muted-foreground leading-relaxed">{children}</ul>,
+      number: ({children}) => <ol className="list-decimal pl-6 space-y-2 mb-6 text-base md:text-lg text-muted-foreground leading-relaxed">{children}</ol>,
+    },
+    listItem: {
+      bullet: ({children}) => <li className="marker:text-accent">{children}</li>,
+      number: ({children}) => <li className="marker:text-accent">{children}</li>,
+    },
     types: {
       image: ({value}: PortableTextTypeComponentProps<PortableImage>) => {
         if (!value?.asset?._ref && !value?.asset?._id) return null
@@ -105,7 +144,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       )}
 
-      <div className="prose prose-lg max-w-none">
+      <div className="max-w-none">
         <PortableText value={post.body || []} components={portableTextComponents} />
       </div>
 
