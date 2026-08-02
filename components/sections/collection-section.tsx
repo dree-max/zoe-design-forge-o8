@@ -73,33 +73,40 @@ export function CollectionSection({ posts = [] }: CollectionSectionProps) {
         </div>
 
         {/* Blog Preview */}
-        <div className="flex md:px-12 lg:px-20 justify-center">
-          <div className="w-full max-w-4xl bg-black/80 rounded-3xl p-8 lg:p-12 flex flex-col justify-between min-h-[280px]">
-            {/* Label */}
-            <div>
-              <p className="text-orange-600 font-semibold tracking-widest text-sm mb-4">
-                INSIGHTS & UPDATES
-              </p>
-              
-              {/* Heading */}
-              <h3 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Explore our Latest Architectural Stories
-              </h3>
-              
-              {/* Description */}
-              <p className="text-gray-300 text-base lg:text-lg leading-relaxed mb-8">
-                Dive deep into our design philosophy, project showcases, and the latest trends in architectural landscape.
-              </p>
+        <div className="flex px-4 md:px-8 lg:px-12 justify-center">
+          <div className="w-full max-w-7xl bg-black/80 rounded-3xl px-6 py-8 md:px-10 md:py-10 flex flex-col lg:flex-row gap-8 lg:gap-12">
+            {/* Copy + CTA */}
+            <div className="lg:w-[38%] lg:shrink-0 flex flex-col justify-between gap-6">
+              <div>
+                <p className="text-orange-600 font-semibold tracking-widest text-sm mb-3">
+                  INSIGHTS & UPDATES
+                </p>
+                <h3 className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-4">
+                  Explore our Latest Architectural Stories
+                </h3>
+                <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
+                  Dive deep into our design philosophy, project showcases, and the latest trends in architectural landscape.
+                </p>
+              </div>
+
+              <div>
+                <Link
+                  href="/blog"
+                  className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-colors"
+                >
+                  VISIT OUR BLOG →
+                </Link>
+              </div>
             </div>
 
             {/* Latest Posts */}
             {latestPosts.length > 0 && (
-              <div className="grid gap-4 md:grid-cols-2 mb-8">
+              <div className="flex-1 grid gap-4 sm:grid-cols-2">
                 {latestPosts.map((post) => (
                   <Link
                     key={post._id}
                     href={`/blog/${post.slug}`}
-                    className="group bg-white/5 border border-white/10 rounded-xl p-5 hover:border-orange-600 transition-colors"
+                    className="group flex flex-col bg-white/5 border border-white/10 rounded-xl p-5 hover:border-orange-600 transition-colors"
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-xs text-gray-400">
@@ -111,10 +118,10 @@ export function CollectionSection({ posts = [] }: CollectionSectionProps) {
                         </span>
                       )}
                     </div>
-                    <h4 className="text-lg font-semibold text-white leading-snug mb-2 group-hover:text-orange-500 transition-colors">
+                    <h4 className="text-base lg:text-lg font-semibold text-white leading-snug mb-2 group-hover:text-orange-500 transition-colors">
                       {post.title}
                     </h4>
-                    <p className="text-sm text-gray-400 leading-relaxed line-clamp-3">
+                    <p className="text-sm text-gray-400 leading-relaxed line-clamp-3 flex-1">
                       {post.excerpt}
                     </p>
                     <div className="mt-4 text-sm font-medium text-orange-500 group-hover:translate-x-1 transition-transform inline-block">
@@ -124,16 +131,6 @@ export function CollectionSection({ posts = [] }: CollectionSectionProps) {
                 ))}
               </div>
             )}
-
-            {/* Button */}
-            <div>
-              <Link
-                href="/blog"
-                className="inline-block px-6 lg:px-8 py-3 lg:py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-colors"
-              >
-                VISIT OUR BLOG →
-              </Link>
-            </div>
           </div>
         </div>
       </div>
