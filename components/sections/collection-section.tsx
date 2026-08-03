@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { FadeImage } from "@/components/fade-image";
+import { useEffect, useState } from "react";
 import type { Post } from "@/sanity/types";
 
 const accessories = [
@@ -39,7 +40,18 @@ function formatDate(date?: string) {
 }
 
 export function CollectionSection({ posts = [] }: CollectionSectionProps) {
-  const latestPosts = posts.slice(0, 2);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const slideshowPosts = posts.slice(0, 6);
+
+  useEffect(() => {
+    if (slideshowPosts.length <= 1) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % slideshowPosts.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slideshowPosts.length]);
+
+  const activePost = slideshowPosts[activeIndex];
 
   return (
     <section id="accessories" className="bg-background">
@@ -99,36 +111,61 @@ export function CollectionSection({ posts = [] }: CollectionSectionProps) {
               </div>
             </div>
 
-            {/* Latest Posts */}
-            {latestPosts.length > 0 && (
-              <div className="flex-1 grid gap-4 sm:grid-cols-2">
-                {latestPosts.map((post) => (
-                  <Link
-                    key={post._id}
-                    href={`/blog/${post.slug}`}
-                    className="group flex flex-col bg-white/5 border border-white/10 rounded-xl p-5 hover:border-orange-600 transition-colors"
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="text-xs text-gray-400">
-                        {formatDate(post.publishedAt)}
-                      </span>
-                      {post.categories?.[0] && (
-                        <span className="px-2 py-0.5 bg-orange-600/20 text-orange-400 rounded-full text-xs font-medium">
-                          {post.categories[0].title}
+            {/* Slideshow */}
+            {slideshowPosts.length > 0 && activePost && (
+              <div className="flex-1 flex flex-col justify-between gap-4">
+                <div className="flex-1 flex flex-col justify-center">
+                  {slideshowPosts.map((post, index) => (
+                    <Link
+                      key={post._id}
+                      href={`/blog/${post.slug}`}
+                      aria-hidden={index !== activeIndex}
+                      tabIndex={index === activeIndex ? 0 : -1}
+                      className={`group flex flex-col bg-white/5 border border-white/10 rounded-xl p-5 hover:border-orange-600 transition-all duration-700 ${
+                        index === activeIndex
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-3 pointer-events-none absolute inset-0"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="text-xs text-gray-400">
+                          {formatDate(post.publishedAt)}
                         </span>
-                      )}
-                    </div>
-                    <h4 className="text-base lg:text-lg font-semibold text-white leading-snug mb-2 group-hover:text-orange-500 transition-colors">
-                      {post.title}
-                    </h4>
-                    <p className="text-sm text-gray-400 leading-relaxed line-clamp-3 flex-1">
-                      {post.excerpt}
-                    </p>
-                    <div className="mt-4 text-sm font-medium text-orange-500 group-hover:translate-x-1 transition-transform inline-block">
-                      Read Article →
-                    </div>
-                  </Link>
-                ))}
+                        {post.categories?.[0] && (
+                          <span className="px-2 py-0.5 bg-orange-600/20 text-orange-400 rounded-full text-xs font-medium">
+                            {post.categories[0].title}
+                          </span>
+                        )}
+                      </div>
+                      <h4 className="text-xl lg:text-2xl font-semibold text-white leading-snug mb-3 group-hover:text-orange-500 transition-colors">
+                        {post.title}
+                      </h4>
+                      <p className="text-sm lg:text-base text-gray-400 leading-relaxed line-clamp-3 flex-1">
+                        {post.excerpt}
+                      </p>
+                      <div className="mt-4 text-sm font-medium text-orange-500 group-hover:translate-x-1 transition-transform inline-block">
+                        Read Article →
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Dots */}
+                <div className="flex items-center gap-2">
+                  {slideshowPosts.map((post, index) => (
+                    <button
+                      key={post._id}
+                      type="button"
+                      aria-label={`Show post ${index + 1}: ${post.title}`}
+                      onClick={() => setActiveIndex(index)}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        index === activeIndex
+                          ? "w-6 bg-orange-500"
+                          : "w-1.5 bg-white/25 hover:bg-white/50"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             )}
           </div>
