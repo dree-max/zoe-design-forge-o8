@@ -16,7 +16,7 @@ import type { Post } from "@/sanity/types";
 export const revalidate = 60;
 
 export default async function Home() {
-  const posts = isSanityConfigured
+  const posts = isSanityConfigured && client
     ? await client.fetch<Post[]>(postsIndexQuery)
     : [];
 

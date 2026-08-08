@@ -14,14 +14,14 @@ interface PageProps {
 
 // Tell Next.js which slugs to pre-render at build time
 export async function generateStaticParams() {
-  if (!isSanityConfigured) return []
+  if (!isSanityConfigured || !client) return []
 
   const posts = await client.fetch<Post[]>(postsIndexQuery)
   return posts.map((post) => ({ slug: post.slug }))
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
-  if (!isSanityConfigured) notFound()
+  if (!isSanityConfigured || !client) notFound()
 
   const { slug } = await params
   const post = await client.fetch<Post>(postBySlugQuery, { slug })
