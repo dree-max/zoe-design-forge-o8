@@ -11,7 +11,7 @@ import { urlFor } from '@/sanity/lib/image'
 export const revalidate = 60 // ISR: revalidate every 60 seconds
 
 export default async function BlogPage() {
-  const posts = isSanityConfigured
+  const posts = isSanityConfigured && client
     ? await client.fetch<Post[]>(postsIndexQuery)
     : []
 

@@ -1,7 +1,9 @@
 import imageUrlBuilder from '@sanity/image-url'
-import { client } from './client'
 
-const builder = imageUrlBuilder(client)
+const builder = imageUrlBuilder({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'placeholder',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+})
 
 export function urlFor(source: any) {
   return builder.image(source)

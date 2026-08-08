@@ -30,7 +30,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3">
           <div className="relative h-10 w-12">
             <Image 
-              src="/logo.jpg"
+              src="/logo.svg"
               alt="Zoe Design Forge"
               height={40}
               width={50}
