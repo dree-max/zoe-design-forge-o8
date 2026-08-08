@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title"><title>Zoe Design Forge mark</title><path fill="#404040" d="M128 96h256L128 352V96Zm256 64v256H128L384 160Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Zoe Design Forge logo">
+  <path fill="#3f3f3f" d="M96 96h320L96 416V96Z"/>
+  <path fill="#3f3f3f" d="M96 416h320V96L96 416Z"/>
+  <path fill="#ffffff" d="M96 416 416 96v96L192 416h-96Z"/>
+</svg>
